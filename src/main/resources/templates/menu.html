@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+  <header>
+    <section class="banner" id="banner">
+      <ul class="banner-slider">
+        <li class="banner-item active-banner">
+          <div class="container">
+            <h1>La auténtica pasión culinaria</h1>
+            <p class="text">la comida es el ingrediente que nos une.</p>
+            <button type="button">ordenar</button>
+          </div>
+        </li>
+        <li class="banner-item">
+          <div class="container">
+            <h1>Descubre la magia de los sabores</h1>
+            <p class="text">saborea la fusión que nos une.</p>
+            <button type="button">ordenar</button>
+          </div>
+        </li>
+        <li class="banner-item">
+          <div class="container">
+            <h1>Cocina con alma</h1>
+            <p class="text">amor y dedicación en cada receta.</p>
+            <button type="button">ordenar</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!--navbar-->
+    <nav class="navbar containerNav">
+      <div class="container">
+
+        <div class="logo-toggler">
+
+          <a href="index.html" class="navbar-brand">
+            <img src="/img/images/LOGO.png">
+          </a>
+
+          <button type="button" class="hamburger" id="navbar-burger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="navbar-collapse">
+          <ul class="navbar-nav">
+            <li><a href="/">inicio</a></li>
+            <li><a href="/menu" class="action">menú</a></li>
+            <li><a href="/galeria">galería</a></li>
+            <li><a href="/carrito">🛒 Carrito (<span id="carrito-count">0</span>)</a></li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--title-->
+  <div class="title">
+    <h2>Nuestro Menú</h2>
+    <div class="line center">
+      <div></div>
+      <span>
+        <i class="fas fa-utensils"></i>
+      </span>
+      <div></div>
+    </div>
+  </div>
+
+  <!--menu-->
+  <section class="menu anim">
+    <div class="contenedor-menu">
+
+      <div class="menu-btns">
+        <button type="button" class="menu-btn active-btn" id="entradas">entradas</button>
+        <button type="button" class="menu-btn" id="postres">postres</button>
+        <button type="button" class="menu-btn" id="platos-principales">platos principales</button>
+        <button type="button" class="menu-btn" id="especiales-dia">especiales del dia</button>
+      </div>
+
+      <!--Entradas-->
+      <div class="food-items">
+        <div class="food-item entradas">
+          <div class="food-img">
+            <img src="/img/menu/causa-rellena.jpg">
+          </div>
+          <div class="contenido-menu">
+            <h2 class="nombre-menu">Causa Rellena</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 13.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Entradas</span></p>           
+            <button onclick="agregarAlCarrito('Causa Rellena', 13.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item entradas">
+          <div class="food-img">
+            <img src="/img/menu/Chonta.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Ensalada de Chonta</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 12.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Entradas</span></p>
+            <button onclick="agregarAlCarrito('Ensalada Chota', 12.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item entradas">
+          <div class="food-img">
+            <img src="/img/menu/Ocopa.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Ocopa</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 10.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Entradas</span></p>
+            <button onclick="agregarAlCarrito('Ocopa', 10.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item entradas">
+          <div class="food-img">
+            <img src="/img/menu/Palta-rellena.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Palta Rellena</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 12.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Entradas</span></p>
+            <button onclick="agregarAlCarrito('Palta Rellena', 12.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item entradas">
+          <div class="food-img">
+            <img src="/img/menu/Papa-a-la-huancaina.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Papa a la Huancaina</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 13.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Entradas</span></p>
+            <button onclick="agregarAlCarrito('Papa a la Huancaina', 13.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item entradas">
+          <div class="food-img">
+            <img src="/img/menu/Tequenos-Peruanos.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Tequeños</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 10.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Entradas</span></p>
+            <button onclick="agregarAlCarrito('Tequeños', 10.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <!--Postres-->
+        <div class="food-item postres">
+          <div class="food-img">
+            <img src="/img/menu/Arroz-con-leche.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Arroz con Leche</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 13.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Postres</span></p>
+            <button onclick="agregarAlCarrito('Arroz con leche', 13.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item postres">
+          <div class="food-img">
+            <img src="/img/menu/Arroz-zambito.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Arroz Zambito</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 13.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Postres</span></p>
+            <button onclick="agregarAlCarrito('Arroz Zambito', 13.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item postres">
+          <div class="food-img">
+            <img src="/img/menu/Huevo-Chimbo.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Huevo Chimbo</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 11.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Postres</span></p>
+            <button onclick="agregarAlCarrito('Huevo Chimbo', 11.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item postres">
+          <div class="food-img">
+            <img src="/img/menu/Mazamorra-morada.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Mazamorra Morada</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 13.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Postres</span></p>
+            <button onclick="agregarAlCarrito('Mazamorra Morada', 13.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item postres">
+          <div class="food-img">
+            <img src="/img/menu/Mazamorra-de-pina.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Mazamorra de Piña</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 13.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Postres</span></p>
+            <button onclick="agregarAlCarrito('Mazamorra de Piña', 13.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item postres">
+          <div class="food-img">
+            <img src="/img/menu/Suspiro-a-la-limena.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Suspiro a la Limeña</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 19.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Postres</span></p>
+            <button onclick="agregarAlCarrito('Suspiro a la Limeña', 19.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <!--Platos Principales-->
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Aji-de-gallina.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Ají de Gallina</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 25.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Aji de Gallina', 25.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/anticucho.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Anticuchos</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 23.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Anticuchos', 23.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/causa-rellena.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Cau Cau</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 25.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Cau Cau', 25.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Chanfainita.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Chanfainita</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 23.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Chanfainita', 23.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/locro.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Locro de Zapallo</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 23.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Locro de Zapallo', 23.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Lomo-Saltado.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Lomo Saltado</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 28.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Lomo Saltado', 28.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Papa-Rellena.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Papa Rellena</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 20.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Papa Rellena', 20.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Saltado-de-atun.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Saltado de Atún</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 26.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Saltado de Atun', 26.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Seco-de-carne.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Seco de Carne</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 28.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Seco de Carne', 28.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Seco-de-Pollo.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Seco de Pollo</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 25.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Seco de Pollo', 25.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Sopa-Criolla.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Sopa Criolla</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 20.50</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Sopa Criolla', 20.50)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item platos-principales">
+          <div class="food-img">
+            <img src="/img/menu/Sopa-Seca.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Sopa Seca</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 26.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Platos Principales</span></p>
+            <button onclick="agregarAlCarrito('Sopa Seca', 26.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <!--Especiales del Dia-->
+        <div class="food-item especiales-dia">
+          <div class="food-img">
+            <img src="/img/menu/Arroz-con-pollo.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Arroz con Pollo</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 28.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Especiales del Día</span></p>
+            <button onclick="agregarAlCarrito('Arroz con Pollo', 28.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item especiales-dia">
+          <div class="food-img">
+            <img src="/img/menu/Bistec-a-lo-Pobre.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Bistec a lo Pobre</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 29.50</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Especiales del Día</span></p>
+            <button onclick="agregarAlCarrito('Bistec a lo Pobre', 29.50)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item especiales-dia">
+          <div class="food-img">
+            <img src="/img/menu/Chicharron-de-cerdo.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Chicharron de Chancho</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 34.50</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Especiales del Día</span></p>
+            <button onclick="agregarAlCarrito('Chicharron de Chancho', 34.50)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item especiales-dia">
+          <div class="food-img">
+            <img src="/img/menu/Menestron.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Menestron</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 30.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Especiales del Día</span></p>
+            <button onclick="agregarAlCarrito('Menestron', 30.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item especiales-dia">
+          <div class="food-img">
+            <img src="/img/menu/Pepian-de-choclo.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Pepian de Choclo</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 25.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Especiales del Día</span></p>
+            <button onclick="agregarAlCarrito('Pepian de Choclo', 25.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="food-item especiales-dia">
+          <div class="food-img">
+            <img src="/img/menu/Picante-de-pollo.jpg">
+          </div>
+          <div class="food-content">
+            <h2 class="nombre-menu">Picante de Pollo</h2>
+            <div class="linea"></div>
+            <h3 class="precio-menu">S/. 25.00</h3>
+            <ul class="rating">
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="far fa-star"></i></li>
+            </ul>
+            <p class="categoria">Categoria: <span>Especiales del Día</span></p>
+            <button onclick="agregarAlCarrito('Picante de Pollo', 25.00)" class="menu_btn">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--footer-->
+  <footer>
+    <div class="footer-info">
+      <div class="container">
+        <div class="footer-row-2">
+          <div class="footer-col-1">
+            <h2>Contáctanos</h2>
+            <ul>
+              <li>Lima, Perú</li>
+              <li>987 888 266</li>
+              <li>lacasadelleon@gmail.com</li>
+              <li>www.lacasadelleon.web.app</li>
+            </ul>
+          </div>
+          <div class="footer-col-2">
+            <h2>Siguenos</h2>
+            <p class="text">Te invitamos a seguirnos en nuestras redes sociales.</p>
+            <ul class="center">
+              <li class="center">
+                <a href="https://www.facebook.com/la.casa.del.leon.restaurant/">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="center">
+                <a href="https://wa.me/+51957640329">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <p class="text">&copy; La Casa del León 2025
+    </p>
+  </footer>
+
+<script src="/jquery/jquery-3.5.1.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="css/carrito.css">  
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/menu">Menu</a></li>
+            <li><a href="/galeria">Galería</a></li>
+            <li><a href="/carrito">🛒 Carrito (<span id="carrito-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>🛒 Tu Carrito</h1>
+        
+        <table id="tabla-carrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se agregarán los productos dinámicamente -->
+            </tbody>
+        </table>
+
+        <div id="total">
+            <h2>Total: S/ <span id="total-carrito">0.00</span></h2>
+        </div>
+        <div id="carrito-items"></div>
+
+<!-- Botón de procesar compra -->
+<div style="text-align: center; margin-top: 20px;">
+    <button id="procesar-compra-btn">Procesar Compra</button>
+</div>
+    </main>
+    <!-- Modal del Formulario -->
+<div id="modal-formulario" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Información para la entrega</h2>
+      <form id="formulario-compra">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+  
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+  
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+  
+        <label for="direccion">Dirección de entrega:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+         <!-- Método de pago -->
+         <label for="metodo-pago">Método de Pago:</label>
+         <select id="metodo-pago" name="metodo-pago" required>
+             <option value="">Seleccione un método de pago</option>
+             <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+             <option value="efectivo">Efectivo</option>
+             <option value="yape">Yape/Plin</option>
+         </select>
+
+         <!-- Campos adicionales para tarjeta -->
+         <div id="tarjeta-pago" class="campo-pago" style="display: none;">
+             <label for="numero-tarjeta">Número de Tarjeta:</label>
+             <input type="text" id="numero-tarjeta" placeholder="•••• •••• •••• ••••" required>
+
+             <label for="fecha-vencimiento">Fecha de Vencimiento:</label>
+             <input type="text" id="fecha-vencimiento" placeholder="MM/AA" required>
+
+             <label for="cvv">CVV:</label>
+             <input type="text" id="cvv" placeholder="•••" required>
+         </div>
+
+         <!-- Campos adicionales para Yape/Plin -->
+         <div id="yape-pago" class="campo-pago" style="display: none;">
+             <label for="yape-numero">Número de Yape/Plin:</label>
+             <input type="text" id="yape-numero" placeholder="Número de Yape o Plin" required>
+         </div>
+
+  
+        <button type="submit">Finalizar Compra</button>
+      </form>
+    </div>
+  </div>
+  
+
+    <script src="js/carrito.js"></script> <!-- nuestro script para manejar el carrito -->
+</body>
+</html>

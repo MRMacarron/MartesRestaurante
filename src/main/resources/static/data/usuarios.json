@@ -1,0 +1,5 @@
+[
+    { "correo": "cliente1@gmail.com", "password": "1234", "rol": "cliente" },
+    { "correo": "trabajador1@local.com", "password": "admin123", "rol": "trabajador" }
+  ]
+  

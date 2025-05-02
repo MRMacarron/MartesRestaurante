@@ -22,6 +22,11 @@ public class HomeController {
 
     @GetMapping("/carrito")
     public String mostrarCarrito() {
-        return "carrito"; // Asegúrate de tener carrito.html en src/main/resources/templates
+        return "carrito"; 
+    }
+
+    @GetMapping("/login")
+    public String mostrarLogin() {
+        return "login";
     }
 }
